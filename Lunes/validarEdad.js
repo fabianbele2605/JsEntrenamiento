@@ -2,6 +2,7 @@
 
 // creamos la function
 function puedesConducir(edad) {
+
     if(edad >= 16){
         console.log("Tienes edad para conducir")
     }else{
