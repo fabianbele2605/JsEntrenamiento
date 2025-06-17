@@ -6,12 +6,12 @@ function dividir(diviendo, divisor) {
     return diviendo / divisor
   } catch (error) {
     console.error("Error al dividir:", error.message);
-    return null
+     return
   }
 }
 
-let resultadoTrue = dividir(50, 2);
-console.log(resultadoTrue)
+/*let resultadoTrue = dividir(50, 2);
+console.log(resultadoTrue)*/
 
 let resultadoFalse = dividir(50, 0)
 console.log(resultadoFalse)
