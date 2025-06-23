@@ -24,7 +24,7 @@ async function crearUsuario(usuario) {
         }
 
         const nuevoUsuario = await response.json();
-        alert('User created successfully!');
+        alert('¡Usuario creado exitosamente!');
         return nuevoUsuario;
     } catch (error) {
         console.error('Error creating user:', error);

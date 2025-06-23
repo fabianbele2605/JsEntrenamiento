@@ -167,6 +167,20 @@
       "edad": 26,
       "email": "fabian@mail.com",
       "is_active": false
+    },
+    {
+      "id": "5daf",
+      "nombre": "martin",
+      "edad": 56,
+      "email": "martin@gmail.com",
+      "is_active": true
+    },
+    {
+      "id": "cc9d",
+      "nombre": "anibal",
+      "edad": 78,
+      "email": "ani@mail.com",
+      "is_active": false
     }
   ]
 }
