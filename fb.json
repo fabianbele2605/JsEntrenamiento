@@ -201,6 +201,13 @@
       "nombre": "andres",
       "edad": 45,
       "email": "andrespo12@hmail.com",
+      "is_active": false
+    },
+    {
+      "id": "7644",
+      "nombre": "patrica",
+      "edad": 56,
+      "email": "patricia859@mail.com",
       "is_active": true
     }
   ]
