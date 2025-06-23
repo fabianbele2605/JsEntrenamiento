@@ -1,12 +1,17 @@
 async function crearUsuario(usuario) {
     try {
-        // Comprobar si hay correos electrónicos duplicados
+        // Check for duplicate email
         const responseCheck = await fetch(`http://localhost:3000/usuarios?email=${encodeURIComponent(usuario.email)}`);
         const existingUsers = await responseCheck.json();
         
         if (existingUsers.length > 0) {
             throw new Error('El correo electrónico ya existe');
         }
+
+        const responseAll = await fetch('http://localhost:3000/usuarios');
+        const allUsers = await responseAll.json();
+        const maxId = allUsers.reduce((max, user) => Math.max(max, parseInt(user.id) || 0), 0);
+        const newId = maxId + 1;
 
         const response = await fetch('http://localhost:3000/usuarios', {
             method: 'POST',
@@ -15,15 +20,15 @@ async function crearUsuario(usuario) {
         });
 
         if (!response.ok) {
-            throw new Error('No se pudo crear el usuario');
+            throw new Error('Failed to create user');
         }
 
         const nuevoUsuario = await response.json();
-        alert('Usuario creado con éxito');
+        alert('User created successfully!');
         return nuevoUsuario;
     } catch (error) {
-        console.error('Error al crear usuario:', error);
-        document.getElementById('error de formulario').textContent = error.message;
+        console.error('Error creating user:', error);
+        document.getElementById('form-error').textContent = error.message;
         return null;
     }
 }
@@ -37,7 +42,7 @@ async function getUsuarioPorId(id) {
         const usuario = await response.json();
         return usuario.is_active ? usuario : null;
     } catch (error) {
-        console.error('Error al obtener el usuario:', error);
+        console.error('Error fetching user:', error);
         return null;
     }
 }
@@ -51,14 +56,14 @@ async function eliminarUsuarioLogico(id) {
         });
 
         if (!response.ok) {
-            throw new Error('No se pudo eliminar lógicamente el usuario');
+            throw new Error('No se pudo eliminar el usuario');
         }
 
-        alert('Usuario eliminado lógicamente');
+        alert('Usuario eliminado');
         obtenerUsuariosActivos(); // Refresh table
     } catch (error) {
-        console.error('Error al eliminar lógicamente el usuario', error);
-        alert('Error al eliminar lógicamente el usuario');
+        console.error('Error logically deleting user:', error);
+        alert('Error logically deleting user');
     }
 }
 
@@ -66,12 +71,12 @@ async function obtenerUsuariosActivos() {
     try {
         const response = await fetch('http://localhost:3000/usuarios?is_active=true');
         if (!response.ok) {
-            throw new Error('No se pudieron obtener los usuarios');
+            throw new Error('Failed to fetch users');
         }
         const usuariosActivos = await response.json();
         
         const tableBody = document.getElementById('users-table-body');
-        tableBody.innerHTML = ''; // Borrar filas existentes
+        tableBody.innerHTML = ''; // Clear existing rows
 
         usuariosActivos.forEach(usuario => {
             const row = document.createElement('tr');
@@ -81,41 +86,41 @@ async function obtenerUsuariosActivos() {
                 <td>${usuario.edad}</td>
                 <td>${usuario.email}</td>
                 <td>
-                    <button onclick="eliminarUsuarioLogico('${usuario.id}')">Eliminar</button>
-                    <button onclick="verDetalleUsuario('${usuario.id}')">Ver</button>
+                    <button onclick="eliminarUsuarioLogico('${usuario.id}')">Delete</button>
+                    <button onclick="viewUserDetails('${usuario.id}')">View</button>
                 </td>
             `;
             tableBody.appendChild(row);
         });
     } catch (error) {
-        console.error('Error fetching users:', error);
-        alert('Error fetching users');
+        console.error('Error al recuperar usuarios:', error);
+        alert('Error al recuperar usuarios');
     }
 }
 
-async function verDetalleUsuario(id) {
+async function viewUserDetails(id) {
     const usuario = await getUsuarioPorId(id);
     if (usuario) {
-        alert(`Detalles del usuario:\nID: ${usuario.id}\nName: ${usuario.nombre}\nAge: ${usuario.edad}\nEmail: ${usuario.email}`);
+        alert(`User Details:\nID: ${usuario.id}\nName: ${usuario.nombre}\nAge: ${usuario.edad}\nEmail: ${usuario.email}`);
     } else {
-        alert('Usuario no encontrado o no activo');
+        alert('User not found or not active');
     }
 }
 
 async function handleCreateUser() {
-    document.getElementById('error de formulario').textContent = ''; // Borrar errores anteriores
+    document.getElementById('form-error').textContent = ''; // Clear previous errors
     
     const nombre = document.getElementById('nombre').value.trim();
     const edad = parseInt(document.getElementById('edad').value);
     const email = document.getElementById('email').value.trim();
 
     if (!nombre || !edad || !email) {
-        document.getElementById('error de formulario').textContent = 'Todos los campos son obligatorios';
+        document.getElementById('form-error').textContent = 'All fields are required';
         return;
     }
 
     if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-        document.getElementById('error de formulario').textContent = 'formato de correo electrónico no válido';
+        document.getElementById('form-error').textContent = 'Formato de correo electrónico no válido';
         return;
     }
 

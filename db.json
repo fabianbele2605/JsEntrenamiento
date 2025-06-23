@@ -19,7 +19,7 @@
       "nombre": "María",
       "edad": 22,
       "email": "maria@mail.com",
-      "is_active": true
+      "is_active": false
     },
     {
       "id": "4",
@@ -103,7 +103,7 @@
       "nombre": "Martina",
       "edad": 24,
       "email": "martina@mail.com",
-      "is_active": true
+      "is_active": false
     },
     {
       "id": "16",
@@ -131,35 +131,42 @@
       "nombre": "Camila",
       "edad": 21,
       "email": "camila@mail.com",
-      "is_active": true
+      "is_active": false
     },
     {
       "id": "20",
       "nombre": "Lucas",
       "edad": 35,
       "email": "lucas@mail.com",
-      "is_active": true
+      "is_active": false
     },
     {
       "id": "c48a",
       "nombre": "Nora",
       "edad": 27,
       "email": "nora@mail.com",
-      "is_active": true
+      "is_active": false
     },
     {
       "id": "7640",
       "nombre": "anibal",
       "edad": 56,
       "email": "anilo123@mail.com",
-      "is_active": true
+      "is_active": false
     },
     {
       "id": "47a3",
       "nombre": "patri",
       "edad": 35,
       "email": "patri12@mail.com",
-      "is_active": true
+      "is_active": false
+    },
+    {
+      "id": "39b5",
+      "nombre": "fabian",
+      "edad": 26,
+      "email": "fabian@mail.com",
+      "is_active": false
     }
   ]
 }
