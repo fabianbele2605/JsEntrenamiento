@@ -7,27 +7,27 @@ async function crearUsuario(usuario) {
         if (existingUsers.length > 0) {
             throw new Error('El correo electrónico ya existe');
         }
-
+        // Recupera a todos los usuarios para determinar el siguiente ID
         const responseAll = await fetch('http://localhost:3000/usuarios');
         const allUsers = await responseAll.json();
-        const maxId = allUsers.reduce((max, user) => Math.max(max, parseInt(user.id) || 0), 0);
+        const maxId = allUsers.reduce((max, usuario) => Math.max(max, parseInt(usuario.id) || 0), 0);
         const newId = maxId + 1;
 
         const response = await fetch('http://localhost:3000/usuarios', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ ...usuario, is_active: true })
+            body: JSON.stringify({ id: newId.toString(), ...usuario, is_active: true })
         });
 
         if (!response.ok) {
-            throw new Error('Failed to create user');
+            throw new Error('No se pudo crear el usuario');
         }
 
         const nuevoUsuario = await response.json();
         alert('¡Usuario creado exitosamente!');
         return nuevoUsuario;
     } catch (error) {
-        console.error('Error creating user:', error);
+        console.error('Error al crear el usuario:', error);
         document.getElementById('form-error').textContent = error.message;
         return null;
     }
@@ -86,8 +86,8 @@ async function obtenerUsuariosActivos() {
                 <td>${usuario.edad}</td>
                 <td>${usuario.email}</td>
                 <td>
-                    <button onclick="eliminarUsuarioLogico('${usuario.id}')">Delete</button>
-                    <button onclick="viewUserDetails('${usuario.id}')">View</button>
+                    <button onclick="eliminarUsuarioLogico('${usuario.id}')">Eliminar</button>
+                    <button onclick="viewUserDetails('${usuario.id}')">Ver</button>
                 </td>
             `;
             tableBody.appendChild(row);

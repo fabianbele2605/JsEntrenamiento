@@ -173,7 +173,7 @@
       "nombre": "martin",
       "edad": 56,
       "email": "martin@gmail.com",
-      "is_active": true
+      "is_active": false
     },
     {
       "id": "cc9d",
@@ -181,6 +181,27 @@
       "edad": 78,
       "email": "ani@mail.com",
       "is_active": false
+    },
+    {
+      "id": "7641",
+      "nombre": "fabian",
+      "edad": 26,
+      "email": "fabito@mail.com",
+      "is_active": false
+    },
+    {
+      "id": "7642",
+      "nombre": "fabian",
+      "edad": 14,
+      "email": "fabiantopl@mail.com",
+      "is_active": false
+    },
+    {
+      "id": "7643",
+      "nombre": "andres",
+      "edad": 45,
+      "email": "andrespo12@hmail.com",
+      "is_active": true
     }
   ]
 }
