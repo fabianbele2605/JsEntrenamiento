@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tabla</title>
+    <title>Tabla</title>
     <link rel="stylesheet" href="./estilo.css">
 </head>
 <body>
     <div class="form-container">
         <h2>Crear Nuevo Usuario</h2>
         <div id="form-error" class="error"></div>
-        <input type="text" id="nombre" placeholder="Name" required>
-        <input type="number" id="edad" placeholder="Age" required>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="edad" placeholder="Edad" required>
         <input type="email" id="email" placeholder="Email" required>
-        <button onclick="manejarCrearUsuario()">Crear Usuario</button>
+        <button onclick="handleCreateUser()">Crear Usuario</button>
     </div>
-
     <div class="button-container">
         <button onclick="obtenerUsuariosActivos()">Llamar funcion</button>
     </div>
 
-    <h2>Usuarios Activos</h2>
+    <h2>usuario activos</h2>
     <table id="users-table">
         <thead>
             <tr>id</tr>
-            <tr>nombre</tr>
-            <tr>edad</tr>
-            <tr>email</tr>
-            <tr>active</tr>
+            <tr>Nombre</tr>
+            <tr>Edad</tr>
+            <tr>Email</tr>
+            <tr>Active</tr>
         </thead>
         <tbody id="users-table-body"></tbody>
     </table>
 
-    <script src="../fabian/conexion.js"></script>
+    <script src="./conexion.js"></script>
 </body>
+
 </html>
-
-

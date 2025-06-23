@@ -1,136 +1,133 @@
 async function crearUsuario(usuario) {
     try {
-        //Chekea duplicado de email
-        const responseCheck = await fetch("http://localhost:3000/usuarios?email=${encodeURIComponent(usuario.email)}");
-        const existingUser = await responseCheck.json();
+        // Comprobar si hay correos electrónicos duplicados
+        const responseCheck = await fetch(`http://localhost:3000/usuarios?email=${encodeURIComponent(usuario.email)}`);
+        const existingUsers = await responseCheck.json();
         
-        if (existingUser.length > 0) {
-            throw new Error('Error, este correo ya exite.');
+        if (existingUsers.length > 0) {
+            throw new Error('El correo electrónico ya existe');
         }
 
         const response = await fetch('http://localhost:3000/usuarios', {
             method: 'POST',
-            headers: { 'Content-type': 'application/json' },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ ...usuario, is_active: true })
         });
 
         if (!response.ok) {
-            throw new Error("No se pudo crear el usuario");
+            throw new Error('No se pudo crear el usuario');
         }
 
         const nuevoUsuario = await response.json();
-        alert('¡Usuario creado exitosamente!');
+        alert('Usuario creado con éxito');
         return nuevoUsuario;
     } catch (error) {
-        console.error("'Error al crear el usuario:", error);
-        document.getElementById("error de formulario").textContent = error.message;
-        return null
+        console.error('Error al crear usuario:', error);
+        document.getElementById('error de formulario').textContent = error.message;
+        return null;
     }
 }
 
 async function getUsuarioPorId(id) {
     try {
-        const response = await fetch("http://localhost:3000/usuarios/?${id}");
-        if(response.ok) {
+        const response = await fetch(`http://localhost:3000/usuarios/${id}`);
+        if (!response.ok) {
             return null;
         }
-        const usuario = await Response.json();
+        const usuario = await response.json();
         return usuario.is_active ? usuario : null;
     } catch (error) {
-        console.error("Error al obtener el usuario:", error);
-        return null
+        console.error('Error al obtener el usuario:', error);
+        return null;
     }
 }
 
 async function eliminarUsuarioLogico(id) {
     try {
-        const response = await fetch("http://localhost:3000/usuarios/?${id}", {
-            method: "PATCH",
-            headers: { "Content-type": "application/json"},
-            body: JSON.stringify({ is_active: false})
+        const response = await fetch(`http://localhost:3000/usuarios/${id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ is_active: false })
         });
-        
+
         if (!response.ok) {
-            throw new Error("No se pudo eliminar lógicamente el usuario");
+            throw new Error('No se pudo eliminar lógicamente el usuario');
         }
 
-        alert("Usuario eliminado lógicamente");
-        obtenerUsuariosActivos(); // actualizar tabla
+        alert('Usuario eliminado lógicamente');
+        obtenerUsuariosActivos(); // Refresh table
     } catch (error) {
-        console.error("Error al eliminar lógicamente el usuario", error);
-        alert("Error al eliminar lógicamente el usuario");
+        console.error('Error al eliminar lógicamente el usuario', error);
+        alert('Error al eliminar lógicamente el usuario');
     }
 }
 
 async function obtenerUsuariosActivos() {
     try {
-        const response = await fetch("http://localhost:3000/usuarios?is_active=true");
-        if(!response.ok) {
-            throw new Error("No se pudieron obtener los usuarios");
+        const response = await fetch('http://localhost:3000/usuarios?is_active=true');
+        if (!response.ok) {
+            throw new Error('No se pudieron obtener los usuarios');
         }
-
-        const usuariosActivos = await reponse.json();
-
-        const tableBody = document.getElementById("users-table-body");
-        tableBody.innerHTML = ""; // borrar las filas existente
+        const usuariosActivos = await response.json();
+        
+        const tableBody = document.getElementById('users-table-body');
+        tableBody.innerHTML = ''; // Borrar filas existentes
 
         usuariosActivos.forEach(usuario => {
-            const row = document.createElement("tr");
+            const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${usuario.id}</td>
                 <td>${usuario.nombre}</td>
                 <td>${usuario.edad}</td>
                 <td>${usuario.email}</td>
                 <td>
-                   <button onclick="eliminarUsuarioLogico('${usuario.id}')">Eliminar</button>
-                   <button onclick="viewUserDetails('${usuario.id}')">Ver</button> 
+                    <button onclick="eliminarUsuarioLogico('${usuario.id}')">Eliminar</button>
+                    <button onclick="verDetalleUsuario('${usuario.id}')">Ver</button>
                 </td>
             `;
-            tableBody.appendChild(row);            
+            tableBody.appendChild(row);
         });
     } catch (error) {
-        console.error("Error al obtener usuarios:", error);
-        alert("Error al recuperar usuarios")
+        console.error('Error fetching users:', error);
+        alert('Error fetching users');
     }
 }
 
-
-async function viewUserDetails(id) {
-    const usuario = await get.getUsuarioPorId(id);
-    if(usuario) {
-        alert(`Detalle Usuario:\nID: ${usuario.id}\nNombre: ${usuario.nombre}\nEdad: ${usuario.edad}\nEmail: ${usuario.email} `);
+async function verDetalleUsuario(id) {
+    const usuario = await getUsuarioPorId(id);
+    if (usuario) {
+        alert(`Detalles del usuario:\nID: ${usuario.id}\nName: ${usuario.nombre}\nAge: ${usuario.edad}\nEmail: ${usuario.email}`);
     } else {
-        alert("Usuario no encontrado o no activo");
+        alert('Usuario no encontrado o no activo');
     }
 }
 
-
-async function manejarCrearUsuario() {
-    document.getElementById("error de formulario").textContent = ''; // borrar datos anteriores
-
-    const nombre = document.getElementById("nombre").value.trim();
-    const edad = parseInt(document.getElementById("edad").value);
-    const email = document.getElementById("email").value.trim();
+async function handleCreateUser() {
+    document.getElementById('error de formulario').textContent = ''; // Borrar errores anteriores
+    
+    const nombre = document.getElementById('nombre').value.trim();
+    const edad = parseInt(document.getElementById('edad').value);
+    const email = document.getElementById('email').value.trim();
 
     if (!nombre || !edad || !email) {
-        document.getElementById("error de formulario").textContent = "Todos los campos son obligatorios";
+        document.getElementById('error de formulario').textContent = 'Todos los campos son obligatorios';
         return;
     }
 
     if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-        document.getElementById("error de formulario").textContent = "formato de correo electrónico no válido";
+        document.getElementById('error de formulario').textContent = 'formato de correo electrónico no válido';
         return;
     }
 
-    const usuario = { nombre, edad, email};
+    const usuario = { nombre, edad, email };
     const nuevoUsuario = await crearUsuario(usuario);
-
+    
     if (nuevoUsuario) {
-        // borra formulario
-        document.getElementById("nombre").value = "";
-        document.getElementById("edad").value = "";
-        document.getElementById("email").value = "";
-        // actualizar tabla
+        // Clear form
+        document.getElementById('nombre').value = '';
+        document.getElementById('edad').value = '';
+        document.getElementById('email').value = '';
+        // Refresh table
         obtenerUsuariosActivos();
     }
 }
