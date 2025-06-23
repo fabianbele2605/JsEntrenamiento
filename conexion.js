@@ -101,7 +101,7 @@ async function obtenerUsuariosActivos() {
 async function viewUserDetails(id) {
     const usuario = await getUsuarioPorId(id);
     if (usuario) {
-        alert(`User Details:\nID: ${usuario.id}\nName: ${usuario.nombre}\nAge: ${usuario.edad}\nEmail: ${usuario.email}`);
+        alert(`Detalles del usuario:\nID: ${usuario.id}\nNombre: ${usuario.nombre}\nEdad: ${usuario.edad}\nEmail: ${usuario.email}`);
     } else {
         alert('User not found or not active');
     }
