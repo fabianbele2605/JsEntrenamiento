@@ -12,7 +12,7 @@
       "nombre": "Luis",
       "edad": 34,
       "email": "luis@mail.com",
-      "is_active": true
+      "is_active": false
     },
     {
       "id": "3",

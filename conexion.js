@@ -1,6 +1,6 @@
 async function crearUsuario(usuario) {
     try {
-        // Check for duplicate email
+        // Comprobar si hay correo electrónico duplicado
         const responseCheck = await fetch(`http://localhost:3000/usuarios?email=${encodeURIComponent(usuario.email)}`);
         const existingUsers = await responseCheck.json();
         
@@ -76,7 +76,7 @@ async function obtenerUsuariosActivos() {
         const usuariosActivos = await response.json();
         
         const tableBody = document.getElementById('users-table-body');
-        tableBody.innerHTML = ''; // Clear existing rows
+        tableBody.innerHTML = ''; // Borrar filas existentes
 
         usuariosActivos.forEach(usuario => {
             const row = document.createElement('tr');
@@ -103,7 +103,7 @@ async function viewUserDetails(id) {
     if (usuario) {
         alert(`Detalles del usuario:\nID: ${usuario.id}\nNombre: ${usuario.nombre}\nEdad: ${usuario.edad}\nEmail: ${usuario.email}`);
     } else {
-        alert('User not found or not active');
+        alert('Usuario no encontrado o no activo');
     }
 }
 
