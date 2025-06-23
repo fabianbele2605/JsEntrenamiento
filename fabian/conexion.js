@@ -1,26 +1,25 @@
-
 async function crearUsuario(usuario) {
     try {
-        //duplicado de email
-        const reponseCheck = await fetch("http://localhost:3000/usuarios?email=${encodeURIComponent(usuario.email)}");
+        //Chekea duplicado de email
+        const responseCheck = await fetch("http://localhost:3000/usuarios?email=${encodeURIComponent(usuario.email)}");
         const existingUser = await responseCheck.json();
         
         if (existingUser.length > 0) {
-            throw new Error("Error, este correo ya exite.");
+            throw new Error('Error, este correo ya exite.');
         }
 
-        const reponse = await fetch("http://localhost:3000/usuarios", {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
+        const response = await fetch('http://localhost:3000/usuarios', {
+            method: 'POST',
+            headers: { 'Content-type': 'application/json' },
             body: JSON.stringify({ ...usuario, is_active: true })
         });
 
-        if (!reponse.ok) {
+        if (!response.ok) {
             throw new Error("No se pudo crear el usuario");
         }
 
-        const nuevoUsuario = await reponse.json();
-        alert("¡Usuario creado exitosamente!");
+        const nuevoUsuario = await response.json();
+        alert('¡Usuario creado exitosamente!');
         return nuevoUsuario;
     } catch (error) {
         console.error("'Error al crear el usuario:", error);
@@ -31,8 +30,8 @@ async function crearUsuario(usuario) {
 
 async function getUsuarioPorId(id) {
     try {
-        const reponse = await fetch("http://localhost:3000/usuarios/?${id}");
-        if(reponse.ok) {
+        const response = await fetch("http://localhost:3000/usuarios/?${id}");
+        if(response.ok) {
             return null;
         }
         const usuario = await Response.json();
@@ -45,13 +44,13 @@ async function getUsuarioPorId(id) {
 
 async function eliminarUsuarioLogico(id) {
     try {
-        const reponse = await fetch("http://localhost:3000/usuarios/?${id}", {
+        const response = await fetch("http://localhost:3000/usuarios/?${id}", {
             method: "PATCH",
             headers: { "Content-type": "application/json"},
             body: JSON.stringify({ is_active: false})
         });
         
-        if (!reponse.ok) {
+        if (!response.ok) {
             throw new Error("No se pudo eliminar lógicamente el usuario");
         }
 
@@ -65,8 +64,8 @@ async function eliminarUsuarioLogico(id) {
 
 async function obtenerUsuariosActivos() {
     try {
-        const reponse = await fetch("http://localhost:3000/usuarios?is_active=true");
-        if(!reponse.ok) {
+        const response = await fetch("http://localhost:3000/usuarios?is_active=true");
+        if(!response.ok) {
             throw new Error("No se pudieron obtener los usuarios");
         }
 
@@ -83,8 +82,8 @@ async function obtenerUsuariosActivos() {
                 <td>${usuario.edad}</td>
                 <td>${usuario.email}</td>
                 <td>
-                   <button onclick="eliminarUsuarioLogico('${usuario.id}')">Delete</button>
-                   <button onclick="viewUserDetails('${usuario.id}')">View</button> 
+                   <button onclick="eliminarUsuarioLogico('${usuario.id}')">Eliminar</button>
+                   <button onclick="viewUserDetails('${usuario.id}')">Ver</button> 
                 </td>
             `;
             tableBody.appendChild(row);            
@@ -96,7 +95,7 @@ async function obtenerUsuariosActivos() {
 }
 
 
-async function verDetalleUsuario(id) {
+async function viewUserDetails(id) {
     const usuario = await get.getUsuarioPorId(id);
     if(usuario) {
         alert(`Detalle Usuario:\nID: ${usuario.id}\nNombre: ${usuario.nombre}\nEdad: ${usuario.edad}\nEmail: ${usuario.email} `);
@@ -107,7 +106,7 @@ async function verDetalleUsuario(id) {
 
 
 async function manejarCrearUsuario() {
-    document.getElementById("error de formulario").textContent = ""; // borrar datos anteriores
+    document.getElementById("error de formulario").textContent = ''; // borrar datos anteriores
 
     const nombre = document.getElementById("nombre").value.trim();
     const edad = parseInt(document.getElementById("edad").value);
