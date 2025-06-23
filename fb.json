@@ -146,20 +146,6 @@
       "edad": 27,
       "email": "nora@mail.com",
       "is_active": true
-    },
-    {
-      "id": "bc32",
-      "nombre": "juan",
-      "edad": 26,
-      "email": "juan123@gmail.com",
-      "is_active": false
-    },
-    {
-      "id": "ffb7",
-      "nombre": "moises",
-      "edad": 15,
-      "email": "moi123@gmail.com",
-      "is_active": true
     }
   ]
 }
