@@ -1,0 +1,13 @@
+{
+    "posts": [
+        { "id": 1, "title": "Introduccion a JSON Server", "authot": "Juan" },
+        { "id": 2, "title": "Como usar APIs REST", "authot": "Luis" }
+    ],
+    "comments": [
+        { "id": 1, "body": "!Gran articulo", "postId": 1 },
+        { "id": 2, "body": "Muy util, gracias", "postId": 2} 
+    ],
+    "profile": {
+        "name": "usuario Ejemplo"
+    }
+}
