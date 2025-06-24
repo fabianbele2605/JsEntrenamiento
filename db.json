@@ -1,0 +1,53 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "juan",
+      "edad": 26,
+      "email": "juan@mail.com",
+      "is_active": true
+    },
+    {
+      "id": "2",
+      "nombre": "jose",
+      "edad": 24,
+      "email": "jose@mail.com",
+      "is_active": true
+    },
+    {
+      "id": "3",
+      "nombre": "luis",
+      "edad": 36,
+      "email": "luis@mail.com",
+      "is_active": true
+    },
+    {
+      "id": "4",
+      "nombre": "hernan",
+      "edad": 46,
+      "email": "hernan@mail.com",
+      "is_active": true
+    },
+    {
+      "id": "5",
+      "nombre": "valeria",
+      "edad": 16,
+      "email": "valeria@mail.com",
+      "is_active": true
+    },
+    {
+      "id": "6",
+      "nombre": "oscar",
+      "edad": 23,
+      "email": "oscar@mail.com",
+      "is_active": true
+    },
+    {
+      "id": "7",
+      "nombre": "fabian",
+      "edad": 26,
+      "email": "fabian@mail.com",
+      "is_active": true
+    }
+  ]
+}
