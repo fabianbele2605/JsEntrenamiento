@@ -7,17 +7,6 @@ async function crearUsuario(usuario) {
         if (existingUsers.length > 0) {
             throw new Error('El correo electrónico ya existe');
         }
-        // Recupera a todos los usuarios para determinar el siguiente ID
-        const responseAll = await fetch('http://localhost:3000/usuarios');
-        const allUsers = await responseAll.json();
-        const maxId = allUsers.reduce((max, usuario) => Math.max(max, parseInt(usuario.id) || 0), 0);
-        const newId = maxId + 1;
-
-        const response = await fetch('http://localhost:3000/usuarios', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ id: newId.toString(), ...usuario, is_active: true })
-        });
 
         if (!response.ok) {
             throw new Error('No se pudo crear el usuario');
