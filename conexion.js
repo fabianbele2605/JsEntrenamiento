@@ -60,10 +60,10 @@ async function eliminarUsuarioLogico(id) {
         }
 
         alert('Usuario eliminado');
-        obtenerUsuariosActivos(); // Refresh table
+        obtenerUsuariosActivos(); // Actualizar tabla
     } catch (error) {
-        console.error('Error logically deleting user:', error);
-        alert('Error logically deleting user');
+        console.error('Error al eliminar el usuario:', error);
+        alert('Error al eliminar el usuario');
     }
 }
 
@@ -71,7 +71,7 @@ async function obtenerUsuariosActivos() {
     try {
         const response = await fetch('http://localhost:3000/usuarios?is_active=true');
         if (!response.ok) {
-            throw new Error('Failed to fetch users');
+            throw new Error('No se pudieron obtener los usuarios');
         }
         const usuariosActivos = await response.json();
         
@@ -108,14 +108,14 @@ async function viewUserDetails(id) {
 }
 
 async function handleCreateUser() {
-    document.getElementById('form-error').textContent = ''; // Clear previous errors
+    document.getElementById('form-error').textContent = ''; // Borrar errores anteriores
     
     const nombre = document.getElementById('nombre').value.trim();
     const edad = parseInt(document.getElementById('edad').value);
     const email = document.getElementById('email').value.trim();
 
     if (!nombre || !edad || !email) {
-        document.getElementById('form-error').textContent = 'All fields are required';
+        document.getElementById('form-error').textContent = 'Todos los campos son obligatorios';
         return;
     }
 
