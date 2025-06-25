@@ -92,7 +92,7 @@
       "linea": "a3",
       "modelo": 2023,
       "color": "blanco",
-      "is_estado": false
+      "is_estado": true
     },
     {
       "id": "12",
@@ -100,7 +100,8 @@
       "linea": "corrolla",
       "modelo": 2020,
       "color": "negro",
-      "is_estado": true
+      "is_estado": false,
+      "debaja": true
     },
     {
       "id": "13",
@@ -117,6 +118,43 @@
       "modelo": 2024,
       "color": "blanca",
       "is_estado": true
+    },
+    {
+      "id": "15",
+      "marca": "abnresd",
+      "linea": "45456",
+      "modelo": 2006,
+      "color": "blanco",
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
+    },
+    {
+      "id": "16",
+      "marca": "BWM",
+      "linea": "m3",
+      "modelo": 2023,
+      "color": "negro",
+      "is_estado": true,
+      "venta": true
+    },
+    {
+      "id": "17",
+      "marca": "Honda",
+      "linea": "civic",
+      "modelo": 2023,
+      "color": "azul",
+      "is_estado": true,
+      "venta": "disponible"
+    },
+    {
+      "id": "18",
+      "marca": "Renaul",
+      "linea": "sandero",
+      "modelo": 2023,
+      "color": "cafe",
+      "is_estado": true,
+      "venta": "disponible"
     }
   ],
   "motos": [

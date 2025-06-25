@@ -9,7 +9,7 @@ async function agregarAuto(auto) {
         const response = await fetch('http://localhost:3000/autos', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body : JSON.stringify({ id: nuevoId.toString(), ...auto, is_estado: true })
+            body : JSON.stringify({ id: nuevoId.toString(), ...auto, is_estado: true, venta: "disponible" })
         });
 
         if (!response.ok) {
