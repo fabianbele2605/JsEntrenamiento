@@ -47,8 +47,8 @@ async function getAutoPorID(id) {
 async function estadoAuto(id) {
     try {
         const response = await fetch(`http://localhost:3000/autos/${id}`, {
-            method: "PATCH",
-            headers: { 'content-type' : 'application/json' },
+            method: 'PATCH',
+            headers: { 'Content-Type' : 'application/json' },
             body: JSON.stringify({ is_estado: false, debaja: true })
         });
 
@@ -67,8 +67,8 @@ async function estadoAuto(id) {
 async function ventaAuto(id) {
     try {
         const response = await fetch(`http://localhost:3000/autos/${id}`, {
-            method: "PATCH",
-            headers: { 'content-type' : 'application/json' },
+            method: 'PATCH',
+            headers: { 'Content-Type' : 'application/json' },
             body: JSON.stringify({ is_estado: true, venta: true })
         });
 

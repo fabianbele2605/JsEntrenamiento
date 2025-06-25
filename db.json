@@ -6,8 +6,9 @@
       "linea": "prado",
       "modelo": 2025,
       "color": "negra",
-      "is_estado": true,
-      "venta": true
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
     },
     {
       "id": "2",
@@ -154,8 +155,9 @@
       "linea": "sandero",
       "modelo": 2023,
       "color": "cafe",
-      "is_estado": true,
-      "venta": "disponible"
+      "is_estado": false,
+      "venta": "disponible",
+      "debaja": true
     },
     {
       "id": "19",
