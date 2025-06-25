@@ -6,7 +6,7 @@
       "linea": "prado",
       "modelo": 2025,
       "color": "negra",
-      "is_estado": false,
+      "is_estado": true,
       "venta": true,
       "debaja": true
     },
@@ -53,7 +53,8 @@
       "linea": "corolla",
       "modelo": 2015,
       "color": "gris",
-      "is_estado": false
+      "is_estado": true,
+      "venta": true
     },
     {
       "id": "7",
@@ -61,8 +62,9 @@
       "linea": "I10",
       "modelo": 2023,
       "color": "blanco",
-      "is_estado": false,
-      "debaja": true
+      "is_estado": true,
+      "debaja": true,
+      "venta": true
     },
     {
       "id": "8",
@@ -70,8 +72,9 @@
       "linea": "3",
       "modelo": 2020,
       "color": "azul",
-      "is_estado": false,
-      "debaja": true
+      "is_estado": true,
+      "debaja": true,
+      "venta": true
     },
     {
       "id": "9",
@@ -213,7 +216,25 @@
       "modelo": 1998,
       "color": "b",
       "is_estado": true,
+      "venta": true
+    },
+    {
+      "id": "24",
+      "marca": "Ferrari",
+      "linea": "f40",
+      "modelo": 2007,
+      "color": "rojo",
+      "is_estado": true,
       "venta": "disponible"
+    },
+    {
+      "id": "25",
+      "marca": "asjfipasjjuan",
+      "linea": "asfasjf",
+      "modelo": 564654,
+      "color": "6846af",
+      "is_estado": true,
+      "venta": true
     }
   ],
   "motos": [
@@ -256,6 +277,35 @@
       "modelo": 2004,
       "color": "azul",
       "is_estado": true
+    },
+    {
+      "id": "6",
+      "marca": "Yamaha",
+      "linea": "nmax",
+      "modelo": 2023,
+      "color": "blanca",
+      "is_estado": true,
+      "venta": "disponible ",
+      "estado": false,
+      "debaja": true
+    },
+    {
+      "id": "7",
+      "marca": "456",
+      "linea": "456465",
+      "modelo": 5648,
+      "color": "llopof",
+      "is_estado": true,
+      "venta": "disponible "
+    },
+    {
+      "id": "8",
+      "marca": "sahdflasf",
+      "linea": "14f5a45f6",
+      "modelo": 456465,
+      "color": "fas54f6",
+      "is_estado": true,
+      "venta": "disponible "
     }
   ],
   "buses": [
