@@ -7,7 +7,7 @@
       "modelo": 2025,
       "color": "negra",
       "is_estado": false,
-      "vendido": true
+      "venta": true
     },
     {
       "id": "2",
@@ -15,7 +15,8 @@
       "linea": "civic",
       "modelo": 2023,
       "color": "rojo",
-      "is_estado": false
+      "is_estado": false,
+      "venta": true
     },
     {
       "id": "3",
@@ -23,7 +24,8 @@
       "linea": "rio",
       "modelo": 2022,
       "color": "azul",
-      "is_estado": true
+      "is_estado": false,
+      "debaja": true
     },
     {
       "id": "4",
@@ -31,7 +33,7 @@
       "linea": "bet",
       "modelo": 2021,
       "color": "gris",
-      "is_estado": false
+      "is_estado": true
     },
     {
       "id": "5",
@@ -39,7 +41,8 @@
       "linea": "picanto",
       "modelo": 2022,
       "color": "amarillo",
-      "is_estado": false
+      "is_estado": true,
+      "venta": true
     },
     {
       "id": "6",
