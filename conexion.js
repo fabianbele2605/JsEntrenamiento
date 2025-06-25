@@ -107,6 +107,7 @@ async function obtenerAutoDisponibles() {
                 <td>${auto.linea}</td>
                 <td>${auto.modelo}</td>
                 <td>${auto.color}</td>
+                <td>${auto.venta}</td>
                 <td>
                     <button onclick="estadoAuto('${auto.id}')">De baja</button>
                     <button onclick="viewCarDetails('${auto.id}')">Ver</button>

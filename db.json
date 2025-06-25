@@ -6,7 +6,7 @@
       "linea": "prado",
       "modelo": 2025,
       "color": "negra",
-      "is_estado": false,
+      "is_estado": true,
       "venta": true
     },
     {
@@ -108,6 +108,14 @@
       "linea": "r8",
       "modelo": 2022,
       "color": "negro",
+      "is_estado": true
+    },
+    {
+      "id": "14",
+      "marca": "BMW",
+      "linea": "x5",
+      "modelo": 2024,
+      "color": "blanca",
       "is_estado": true
     }
   ],
