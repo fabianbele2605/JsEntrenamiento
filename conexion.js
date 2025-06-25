@@ -1,3 +1,4 @@
+// funcion para agregar autos
 async function agregarAuto(auto) {
     try {
         const responseAll = await fetch('http://localhost:3000/autos');
@@ -8,7 +9,7 @@ async function agregarAuto(auto) {
         const response = await fetch('http://localhost:3000/autos', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body : JSON.stringify({ id: nuevoId.toString(), ...auto})
+            body : JSON.stringify({ id: nuevoId.toString(), ...auto, is_estado: true })
         });
 
         if (!response.ok) {
@@ -25,6 +26,7 @@ async function agregarAuto(auto) {
     }
 }
 
+
 async function getAutoPorID(id) {
     try {
         const response = await fetch(`http://localhost:3000/autos/${id}`);
@@ -33,12 +35,13 @@ async function getAutoPorID(id) {
         }
 
         const auto = await response.json();
-        return auto.estado ? auto : null;
+        return auto.is_estado ? auto : null;
     } catch (error) {
         console.error('Error al obtener el auto:', error);
         return null;
     }
 }
+
 
 // funcion para saber si el vehiculo sigeu en el inventariop si aparace false es por que fue vendido
 async function estadoAuto(id) {
@@ -46,7 +49,27 @@ async function estadoAuto(id) {
         const response = await fetch(`http://localhost:3000/autos/${id}`, {
             method: "PATCH",
             headers: { 'content-type' : 'application/json' },
-            body: JSON.stringify({ estado: false})
+            body: JSON.stringify({ is_estado: false })
+        });
+
+        if(!response.ok) {
+            throw new Error('todavia no se ha dado de baja el carro');
+        }
+
+        alert('Auto de baja');
+        obtenerAutoDisponibles();
+    } catch (error) {
+        console.error('Error al quitar el auto del inventario:', error);
+        alert('Error al quitar el auto del inventario');
+    }
+}
+
+async function ventaAuto(id) {
+    try {
+        const response = await fetch(`http://localhost:3000/autos/${id}`, {
+            method: "PATCH",
+            headers: { 'content-type' : 'application/json' },
+            body: JSON.stringify({ is_estado: false, "vendido": true })
         });
 
         if(!response.ok) {
@@ -62,6 +85,8 @@ async function estadoAuto(id) {
 }
 
 
+
+// obtener autos
 async function obtenerAutoDisponibles() {
     try {
         const response = await fetch('http://localhost:3000/autos?estado=true');
@@ -85,6 +110,7 @@ async function obtenerAutoDisponibles() {
                 <td>
                     <button onclick="estadoAuto('${auto.id}')">De baja</button>
                     <button onclick="viewCarDetails('${auto.id}')">Ver</button>
+                    <button onclick="ventaAuto('${auto.id}')">Vendido</button>
                  </td>
             `;
             tableBody.appendChild(row);
@@ -95,6 +121,8 @@ async function obtenerAutoDisponibles() {
     }
 }
 
+
+// funcion de ver detaller del carro
 async function viewCarDetails(id) {
     const auto = await getAutoPorID(id);
     if(auto) {
@@ -104,6 +132,9 @@ async function viewCarDetails(id) {
     }
 }
 
+
+
+// funcion para agregar carro al formulario
 async function handleAddCar() {
     document.getElementById('form-error').textContent = '';
     
@@ -130,3 +161,5 @@ async function handleAddCar() {
         obtenerAutoDisponibles();
     }
 }
+
+

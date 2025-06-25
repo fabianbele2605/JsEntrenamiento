@@ -6,7 +6,8 @@
       "linea": "prado",
       "modelo": 2025,
       "color": "negra",
-      "estado": false
+      "is_estado": false,
+      "vendido": true
     },
     {
       "id": "2",
@@ -14,7 +15,7 @@
       "linea": "civic",
       "modelo": 2023,
       "color": "rojo",
-      "estado": true
+      "is_estado": false
     },
     {
       "id": "3",
@@ -22,7 +23,7 @@
       "linea": "rio",
       "modelo": 2022,
       "color": "azul",
-      "estado": true
+      "is_estado": true
     },
     {
       "id": "4",
@@ -30,7 +31,7 @@
       "linea": "bet",
       "modelo": 2021,
       "color": "gris",
-      "estado": false
+      "is_estado": false
     },
     {
       "id": "5",
@@ -38,7 +39,7 @@
       "linea": "picanto",
       "modelo": 2022,
       "color": "amarillo",
-      "estado": false
+      "is_estado": false
     },
     {
       "id": "6",
@@ -46,7 +47,63 @@
       "linea": "corolla",
       "modelo": 2015,
       "color": "gris",
-      "estado": false
+      "is_estado": false
+    },
+    {
+      "id": "7",
+      "marca": "Hyundai",
+      "linea": "I10",
+      "modelo": 2023,
+      "color": "blanco",
+      "is_estado": true
+    },
+    {
+      "id": "8",
+      "marca": "mazda",
+      "linea": "3",
+      "modelo": 2020,
+      "color": "azul",
+      "is_estado": true
+    },
+    {
+      "id": "9",
+      "marca": "kia",
+      "linea": "k5",
+      "modelo": 2023,
+      "color": "gris",
+      "is_estado": true
+    },
+    {
+      "id": "10",
+      "marca": "Nissan",
+      "linea": "versa",
+      "modelo": 2022,
+      "color": "blanco",
+      "is_estado": false
+    },
+    {
+      "id": "11",
+      "marca": "audi",
+      "linea": "a3",
+      "modelo": 2023,
+      "color": "blanco",
+      "is_estado": false
+    },
+    {
+      "id": "12",
+      "marca": "Toyota",
+      "linea": "corrolla",
+      "modelo": 2020,
+      "color": "negro",
+      "is_estado": true
+    },
+    {
+      "id": "13",
+      "marca": "Audi",
+      "linea": "r8",
+      "modelo": 2022,
+      "color": "negro",
+      "is_estado": true
     }
   ],
   "motos": [
@@ -56,7 +113,7 @@
       "linea": "ax4",
       "modelo": 2020,
       "color": "blanca",
-      "estado": true
+      "is_estado": true
     },
     {
       "id": "2",
@@ -64,7 +121,7 @@
       "linea": "cb125f",
       "modelo": 2023,
       "color": "negra",
-      "estado": true
+      "is_estado": true
     },
     {
       "id": "3",
@@ -72,7 +129,23 @@
       "linea": "xtz",
       "modelo": 2025,
       "color": "azul",
-      "estado": true
+      "is_estado": true
+    },
+    {
+      "id": "4",
+      "marca": "Pulsar",
+      "linea": "ns200",
+      "modelo": 2021,
+      "color": "roja",
+      "is_estado": true
+    },
+    {
+      "id": "5",
+      "marca": "Yamaha",
+      "linea": "dt 175",
+      "modelo": 2004,
+      "color": "azul",
+      "is_estado": true
     }
   ],
   "buses": [
