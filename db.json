@@ -206,8 +206,9 @@
       "linea": "44",
       "modelo": 444,
       "color": "444",
-      "is_estado": true,
-      "venta": true
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
     },
     {
       "id": "23",
@@ -225,7 +226,7 @@
       "modelo": 2007,
       "color": "rojo",
       "is_estado": true,
-      "venta": "disponible"
+      "venta": true
     },
     {
       "id": "25",
@@ -233,8 +234,9 @@
       "linea": "asfasjf",
       "modelo": 564654,
       "color": "6846af",
-      "is_estado": true,
-      "venta": true
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
     },
     {
       "id": "26",
@@ -245,6 +247,25 @@
       "is_estado": false,
       "venta": "disponible",
       "debaja": true
+    },
+    {
+      "id": "27",
+      "marca": "fhasofhoi",
+      "linea": "654f65as4",
+      "modelo": 5465456,
+      "color": "fasf45",
+      "is_estado": false,
+      "venta": "disponible",
+      "debaja": true
+    },
+    {
+      "id": "28",
+      "marca": "honda",
+      "linea": "civic",
+      "modelo": 2023,
+      "color": "verde",
+      "is_estado": true,
+      "venta": "disponible"
     }
   ],
   "motos": [
@@ -254,7 +275,7 @@
       "linea": "ax4",
       "modelo": 2020,
       "color": "blanca",
-      "is_estado": true,
+      "is_estado": false,
       "estado": false
     },
     {
@@ -319,6 +340,22 @@
       "color": "fas54f6",
       "is_estado": true,
       "venta": "disponible "
+    },
+    {
+      "id": "9",
+      "marca": "sfsafasf",
+      "linea": "5456465",
+      "modelo": 5464,
+      "color": "faknol",
+      "is_estado": true
+    },
+    {
+      "id": "10",
+      "marca": "jslafjlajl",
+      "linea": "45f456",
+      "modelo": 45646,
+      "color": "fasff",
+      "is_estado": true
     }
   ],
   "buses": [

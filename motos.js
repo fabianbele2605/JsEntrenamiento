@@ -47,7 +47,7 @@ async function estadoMoto(id) {
         const response = await fetch(`http://localhost:3000/motos/${id}`, {
             method: "PATCH",
             headers: { 'content-type' : 'application/json' },
-            body: JSON.stringify({ estado: false})
+            body: JSON.stringify({ is_estado: false})
         });
 
         if(!response.ok) {
@@ -62,11 +62,31 @@ async function estadoMoto(id) {
     }
 }
 
+async function ventaMoto(id) {
+    try {
+        const response = await fetch(`http://localhost:3000/motos/${id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type' : 'application/json' },
+            body: JSON.stringify({ is_estado: true, venta: true })
+        });
+
+        if (!response.ok) {
+            throw new Error('Todavia no se ah vendido la moto');
+        }
+
+        alert('Moto vendida');
+
+    } catch (error) {
+        console.error('Error al quitar la moto del inventario:', error);
+        alert('Error al quitar la moto del inventario')
+    }
+}
+
 
 // obtener motos
 async function obtenerMotoDisponibles() {
     try {
-        const response = await fetch('http://localhost:3000/motos?estado=true');
+        const response = await fetch('http://localhost:3000/motos?is_estado=true');
         if(!response.ok) {
             throw new Error('No se pudieron obtener las motos disponibles');
         }
@@ -84,9 +104,11 @@ async function obtenerMotoDisponibles() {
                 <td>${moto.linea}</td>
                 <td>${moto.modelo}</td>
                 <td>${moto.color}</td>
+                <td>${moto.venta}</td>
                 <td>
                     <button onclick="estadoMoto('${moto.id}')">De baja</button>
                     <button onclick="viewMotoDetails('${moto.id}')">Ver</button>
+                    <button onclick="ventaMoto"('${moto.id}')">Vendida</button>
                  </td>
             `;
             tableBody.appendChild(row);
