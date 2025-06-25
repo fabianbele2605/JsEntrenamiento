@@ -30,7 +30,23 @@
       "linea": "bet",
       "modelo": 2021,
       "color": "gris",
-      "estado": true
+      "estado": false
+    },
+    {
+      "id": "5",
+      "marca": "kia",
+      "linea": "picanto",
+      "modelo": 2022,
+      "color": "amarillo",
+      "estado": false
+    },
+    {
+      "id": "6",
+      "marca": "Toyoya",
+      "linea": "corolla",
+      "modelo": 2015,
+      "color": "gris",
+      "estado": false
     }
   ],
   "motos": [
