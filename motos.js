@@ -137,3 +137,6 @@ async function handleAddMoto() {
         obtenerMotoDisponibles();
     }
 }
+
+
+obtenerMotoDisponibles()

@@ -207,7 +207,7 @@
       "modelo": 444,
       "color": "444",
       "is_estado": true,
-      "venta": "disponible"
+      "venta": true
     },
     {
       "id": "23",
@@ -254,7 +254,8 @@
       "linea": "ax4",
       "modelo": 2020,
       "color": "blanca",
-      "is_estado": true
+      "is_estado": true,
+      "estado": false
     },
     {
       "id": "2",
@@ -270,7 +271,8 @@
       "linea": "xtz",
       "modelo": 2025,
       "color": "azul",
-      "is_estado": true
+      "is_estado": true,
+      "estado": false
     },
     {
       "id": "4",
@@ -306,7 +308,8 @@
       "modelo": 5648,
       "color": "llopof",
       "is_estado": true,
-      "venta": "disponible "
+      "venta": "disponible ",
+      "estado": false
     },
     {
       "id": "8",
