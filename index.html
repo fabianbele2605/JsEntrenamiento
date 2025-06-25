@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoRiwi</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <h1>AutoRiwi</h1>
@@ -14,7 +15,7 @@
         <input type="text" id="linea" placeholder="Referencia" required>
         <input type="number" id="modelo" placeholder="Año" required>
         <input type="text" id="color" placeholder="Color">
-        <button onclick="">Subir Auto</button>
+        <button onclick="handleAddCar">Subir Auto</button>
     </div>
     <div class="form-container">
         <h2>Agregar Motos</h2>
@@ -27,7 +28,24 @@
     </div>
 
     <div class="button-container">
-        <button onclick=""></button>
+        <button onclick="obtenerAutoDisponibles">Autos disponibles</button>
     </div>
+
+    <h2>Autos disponibles</h2>
+    <table id="auto-table">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>Marca</td>
+                <td>Linea</td>
+                <td>Modelo</td>
+                <td>Color</td>
+                <td>Estado</td>
+            </tr>
+        </thead>
+        <body id="auto-table-body"></body>
+    </table>
+
+    <script src="./conexion.js"></script>
 </body>
 </html>

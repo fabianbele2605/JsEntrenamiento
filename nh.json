@@ -1,0 +1,18 @@
+{
+    "vehiculos": [
+        {
+            "categoria": "autos",
+            "items": [
+                {"id": 1, "marca": "Toyota", "modelo": "Prado", "color": "negro", "año": 2024 },
+                { "id": 2, "marca": "Kia", "modelo": "Rio", "color": "rojo", "año": 2025}
+            ]
+        },
+        {
+            "categoria": "motos",
+            "items": [
+                { "id": 1, "marca": "Yamaha", "modelo": "Xtz", "color": "azul", "año": 2023 },
+                { "id": 2, "marca": "suzuki", "modelo": "Ax4", "color": "negro", "año": 2019 }
+            ]
+        }
+    ]
+}

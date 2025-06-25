@@ -1,60 +1,67 @@
 {
       "autos": [
         {
-          "id": "0001",
+          "id": "1",
           "marca": "toyota",
           "linea": "prado",
           "modelo": 2025,
-          "color": "negra"
+          "color": "negra",
+          "estado": true
         },
         {
-          "id": "0002",
+          "id": "2",
           "marca": "honda",
           "linea": "civic",
           "modelo": 2023,
-          "color": "rojo"
+          "color": "rojo",
+          "estado": true
         },
         {
-          "id": "0003",
+          "id": "3",
           "marca": "kia",
           "linea": "rio",
           "modelo": 2022,
-          "color": "azul"
+          "color": "azul",
+          "estado": true
         },
         {
-          "id": "0004",
+          "id": "4",
           "marca": "chevrolet",
           "linea": "bet",
           "modelo": 2021,
-          "color": "gris"
+          "color": "gris",
+          "estado": true
         }
       ],
       "motos": [
         {
-          "id": "1000",
+          "id": "1",
           "marca": "suzuki",
           "linea": "ax4",
           "modelo": 2020,
-          "color": "blanca"
+          "color": "blanca",
+          "estado": true
         },
         {
-          "id": "1001",
+          "id": "2",
           "marca": "honda",
           "linea": "cb125f",
           "modelo": 2023,
-          "color": "negra"
+          "color": "negra",
+          "estado": true
         },
         {
-          "id": "1002",
+          "id": "3",
           "marca": "yamaha",
           "linea": "xtz",
           "modelo": 2025,
-          "color": "azul"
+          "color": "azul",
+          "estado": true
         }
       ],
       "buses": [
         {
-          "id": "2000",
+          "id": "1",
           "marca": "hyundai",
           "linea": "country deluxe",
           "modelo": 2021,
