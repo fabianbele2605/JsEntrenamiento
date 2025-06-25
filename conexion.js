@@ -49,7 +49,7 @@ async function estadoAuto(id) {
         const response = await fetch(`http://localhost:3000/autos/${id}`, {
             method: "PATCH",
             headers: { 'content-type' : 'application/json' },
-            body: JSON.stringify({ is_estado: false, debaja: true, venta: "no disponible" })
+            body: JSON.stringify({ is_estado: false, debaja: true })
         });
 
         if(!response.ok) {
