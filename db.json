@@ -415,7 +415,7 @@
       "modelo": 6464,
       "color": "fafafs",
       "is_estado": true,
-      "venta": "disponible"
+      "venta": true
     },
     {
       "id": "15",
