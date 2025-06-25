@@ -34,7 +34,8 @@
       "linea": "bet",
       "modelo": 2021,
       "color": "gris",
-      "is_estado": true
+      "is_estado": false,
+      "debaja": true
     },
     {
       "id": "5",
@@ -42,8 +43,9 @@
       "linea": "picanto",
       "modelo": 2022,
       "color": "amarillo",
-      "is_estado": true,
-      "venta": true
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
     },
     {
       "id": "6",
@@ -59,7 +61,8 @@
       "linea": "I10",
       "modelo": 2023,
       "color": "blanco",
-      "is_estado": true
+      "is_estado": false,
+      "debaja": true
     },
     {
       "id": "8",
@@ -76,8 +79,9 @@
       "linea": "k5",
       "modelo": 2023,
       "color": "gris",
-      "is_estado": true,
-      "venta": true
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
     },
     {
       "id": "10",
@@ -93,7 +97,8 @@
       "linea": "a3",
       "modelo": 2023,
       "color": "blanco",
-      "is_estado": true
+      "is_estado": true,
+      "venta": true
     },
     {
       "id": "12",
@@ -177,6 +182,25 @@
       "is_estado": false,
       "venta": "no disponible",
       "debaja": true
+    },
+    {
+      "id": "21",
+      "marca": "Nissan",
+      "linea": "Gtr",
+      "modelo": 2001,
+      "color": "negro",
+      "is_estado": false,
+      "venta": "disponible",
+      "debaja": true
+    },
+    {
+      "id": "22",
+      "marca": "44",
+      "linea": "44",
+      "modelo": 444,
+      "color": "444",
+      "is_estado": true,
+      "venta": "disponible"
     }
   ],
   "motos": [

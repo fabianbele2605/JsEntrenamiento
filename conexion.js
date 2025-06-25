@@ -89,7 +89,7 @@ async function ventaAuto(id) {
 // obtener autos
 async function obtenerAutoDisponibles() {
     try {
-        const response = await fetch('http://localhost:3000/autos?estado=true');
+        const response = await fetch('http://localhost:3000/autos?is_estado=true');
         if(!response.ok) {
             throw new Error('No se pudieron obtener los autos disponibles');
         }
