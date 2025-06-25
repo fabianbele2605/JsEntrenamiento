@@ -1,73 +1,71 @@
 {
-      "autos": [
-        {
-          "id": "1",
-          "marca": "toyota",
-          "linea": "prado",
-          "modelo": 2025,
-          "color": "negra",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "marca": "honda",
-          "linea": "civic",
-          "modelo": 2023,
-          "color": "rojo",
-          "estado": true
-        },
-        {
-          "id": "3",
-          "marca": "kia",
-          "linea": "rio",
-          "modelo": 2022,
-          "color": "azul",
-          "estado": true
-        },
-        {
-          "id": "4",
-          "marca": "chevrolet",
-          "linea": "bet",
-          "modelo": 2021,
-          "color": "gris",
-          "estado": true
-        }
-      ],
-      "motos": [
-        {
-          "id": "1",
-          "marca": "suzuki",
-          "linea": "ax4",
-          "modelo": 2020,
-          "color": "blanca",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "marca": "honda",
-          "linea": "cb125f",
-          "modelo": 2023,
-          "color": "negra",
-          "estado": true
-        },
-        {
-          "id": "3",
-          "marca": "yamaha",
-          "linea": "xtz",
-          "modelo": 2025,
-          "color": "azul",
-          "estado": true
-        }
-      ],
-      "buses": [
-        {
-          "id": "1",
-          "marca": "hyundai",
-          "linea": "country deluxe",
-          "modelo": 2021,
-          "color": "blanca"
-        }
-      ]
-    
-  
+  "autos": [
+    {
+      "id": "1",
+      "marca": "toyota",
+      "linea": "prado",
+      "modelo": 2025,
+      "color": "negra",
+      "estado": false
+    },
+    {
+      "id": "2",
+      "marca": "honda",
+      "linea": "civic",
+      "modelo": 2023,
+      "color": "rojo",
+      "estado": true
+    },
+    {
+      "id": "3",
+      "marca": "kia",
+      "linea": "rio",
+      "modelo": 2022,
+      "color": "azul",
+      "estado": true
+    },
+    {
+      "id": "4",
+      "marca": "chevrolet",
+      "linea": "bet",
+      "modelo": 2021,
+      "color": "gris",
+      "estado": true
+    }
+  ],
+  "motos": [
+    {
+      "id": "1",
+      "marca": "suzuki",
+      "linea": "ax4",
+      "modelo": 2020,
+      "color": "blanca",
+      "estado": true
+    },
+    {
+      "id": "2",
+      "marca": "honda",
+      "linea": "cb125f",
+      "modelo": 2023,
+      "color": "negra",
+      "estado": true
+    },
+    {
+      "id": "3",
+      "marca": "yamaha",
+      "linea": "xtz",
+      "modelo": 2025,
+      "color": "azul",
+      "estado": true
+    }
+  ],
+  "buses": [
+    {
+      "id": "1",
+      "marca": "hyundai",
+      "linea": "country deluxe",
+      "modelo": 2021,
+      "color": "blanca"
+    }
+  ]
 }

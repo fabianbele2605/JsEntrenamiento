@@ -8,7 +8,7 @@ async function agregarAuto(auto) {
         const response = await fetch('http://localhost:3000/autos', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body : JSONS.stringify({ id: nuevoId.toString(), ...auto})
+            body : JSON.stringify({ id: nuevoId.toString(), ...auto})
         });
 
         if (!response.ok) {
@@ -82,7 +82,6 @@ async function obtenerAutoDisponibles() {
                 <td>${auto.linea}</td>
                 <td>${auto.modelo}</td>
                 <td>${auto.color}</td>
-                <td>${auto.estaod}</td>
                 <td>
                     <button onclick="estadoAuto('${auto.id}')">De baja</button>
                     <button onclick="viewCarDetails('${auto.id}')">Ver</button>
@@ -120,7 +119,7 @@ async function handleAddCar() {
     }
 
     const auto = { marca, linea, modelo, color};
-    const nuevoAuto = await crearAuto(auto);
+    const nuevoAuto = await agregarAuto(auto);
 
     if (nuevoAuto) {
         document.getElementById('marca').value = '';
