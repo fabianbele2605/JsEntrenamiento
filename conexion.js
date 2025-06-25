@@ -77,7 +77,8 @@ async function ventaAuto(id) {
         }
 
         alert('Auto vendido');
-        obtenerAutoDisponibles();
+          
+        
     } catch (error) {
         console.error('Error al quitar el auto del inventario:', error);
         alert('Error al quitar el auto del inventario');
@@ -117,8 +118,8 @@ async function obtenerAutoDisponibles() {
             tableBody.appendChild(row);
         });
     } catch (error) {
-        console.error('Error al recuperar auto:', error);
-        alert('Error al recuperar auto');
+        
+
     }
 }
 
@@ -163,4 +164,6 @@ async function handleAddCar() {
     }
 }
 
+
+obtenerAutoDisponibles()  
 

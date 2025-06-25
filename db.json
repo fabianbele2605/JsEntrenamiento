@@ -97,8 +97,9 @@
       "linea": "a3",
       "modelo": 2023,
       "color": "blanco",
-      "is_estado": true,
-      "venta": true
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
     },
     {
       "id": "12",
@@ -115,7 +116,8 @@
       "linea": "r8",
       "modelo": 2022,
       "color": "negro",
-      "is_estado": true
+      "is_estado": true,
+      "venta": true
     },
     {
       "id": "14",
@@ -123,7 +125,8 @@
       "linea": "x5",
       "modelo": 2024,
       "color": "blanca",
-      "is_estado": true
+      "is_estado": true,
+      "venta": true
     },
     {
       "id": "15",
@@ -141,8 +144,9 @@
       "linea": "m3",
       "modelo": 2023,
       "color": "negro",
-      "is_estado": true,
-      "venta": true
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
     },
     {
       "id": "17",
@@ -171,7 +175,7 @@
       "modelo": 2022,
       "color": "blanco",
       "is_estado": true,
-      "venta": "disponible"
+      "venta": true
     },
     {
       "id": "20",
@@ -199,6 +203,15 @@
       "linea": "44",
       "modelo": 444,
       "color": "444",
+      "is_estado": true,
+      "venta": "disponible"
+    },
+    {
+      "id": "23",
+      "marca": "s",
+      "linea": "ss",
+      "modelo": 1998,
+      "color": "b",
       "is_estado": true,
       "venta": "disponible"
     }
