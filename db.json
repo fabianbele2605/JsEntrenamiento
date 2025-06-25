@@ -6,7 +6,7 @@
       "linea": "prado",
       "modelo": 2025,
       "color": "negra",
-      "is_estado": true,
+      "is_estado": false,
       "venta": true,
       "debaja": true
     },
@@ -235,6 +235,16 @@
       "color": "6846af",
       "is_estado": true,
       "venta": true
+    },
+    {
+      "id": "26",
+      "marca": "fas5fas5",
+      "linea": "4564fa65",
+      "modelo": 5464,
+      "color": "fsaof",
+      "is_estado": false,
+      "venta": "disponible",
+      "debaja": true
     }
   ],
   "motos": [
