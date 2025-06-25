@@ -144,8 +144,9 @@
       "linea": "civic",
       "modelo": 2023,
       "color": "azul",
-      "is_estado": true,
-      "venta": "disponible"
+      "is_estado": false,
+      "venta": "no disponible",
+      "debaja": true
     },
     {
       "id": "18",
@@ -153,6 +154,15 @@
       "linea": "sandero",
       "modelo": 2023,
       "color": "cafe",
+      "is_estado": true,
+      "venta": "disponible"
+    },
+    {
+      "id": "19",
+      "marca": "Mazda",
+      "linea": "2",
+      "modelo": 2022,
+      "color": "blanco",
       "is_estado": true,
       "venta": "disponible"
     }
