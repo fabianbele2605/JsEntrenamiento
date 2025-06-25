@@ -265,7 +265,25 @@
       "modelo": 2023,
       "color": "verde",
       "is_estado": true,
-      "venta": "disponible"
+      "venta": true
+    },
+    {
+      "id": "29",
+      "marca": "hfjkahfkj",
+      "linea": "ljfalkfj",
+      "modelo": 464654,
+      "color": "fafafsa",
+      "is_estado": true,
+      "venta": true
+    },
+    {
+      "id": "30",
+      "marca": "afnaslfnlk",
+      "linea": "jafkj",
+      "modelo": 486468,
+      "color": "fasfkasjf",
+      "is_estado": true,
+      "venta": true
     }
   ],
   "motos": [
@@ -284,7 +302,8 @@
       "linea": "cb125f",
       "modelo": 2023,
       "color": "negra",
-      "is_estado": true
+      "is_estado": false,
+      "debaja": true
     },
     {
       "id": "3",
@@ -292,8 +311,8 @@
       "linea": "xtz",
       "modelo": 2025,
       "color": "azul",
-      "is_estado": true,
-      "estado": false
+      "is_estado": false,
+      "debaja": true
     },
     {
       "id": "4",
@@ -301,7 +320,8 @@
       "linea": "ns200",
       "modelo": 2021,
       "color": "roja",
-      "is_estado": true
+      "is_estado": false,
+      "debaja": true
     },
     {
       "id": "5",
@@ -309,7 +329,8 @@
       "linea": "dt 175",
       "modelo": 2004,
       "color": "azul",
-      "is_estado": true
+      "is_estado": false,
+      "debaja": true
     },
     {
       "id": "6",
@@ -317,7 +338,7 @@
       "linea": "nmax",
       "modelo": 2023,
       "color": "blanca",
-      "is_estado": true,
+      "is_estado": false,
       "venta": "disponible ",
       "estado": false,
       "debaja": true
@@ -328,9 +349,10 @@
       "linea": "456465",
       "modelo": 5648,
       "color": "llopof",
-      "is_estado": true,
+      "is_estado": false,
       "venta": "disponible ",
-      "estado": false
+      "estado": false,
+      "debaja": true
     },
     {
       "id": "8",
@@ -339,7 +361,7 @@
       "modelo": 456465,
       "color": "fas54f6",
       "is_estado": true,
-      "venta": "disponible "
+      "venta": true
     },
     {
       "id": "9",
@@ -347,7 +369,8 @@
       "linea": "5456465",
       "modelo": 5464,
       "color": "faknol",
-      "is_estado": true
+      "is_estado": true,
+      "venta": true
     },
     {
       "id": "10",
@@ -355,7 +378,91 @@
       "linea": "45f456",
       "modelo": 45646,
       "color": "fasff",
-      "is_estado": true
+      "is_estado": false,
+      "debaja": true
+    },
+    {
+      "id": "11",
+      "marca": "juanana",
+      "linea": "jafau",
+      "modelo": 4878,
+      "color": "jafjaf",
+      "is_estado": false
+    },
+    {
+      "id": "12",
+      "marca": "fahfkhk",
+      "linea": "lijflaij",
+      "modelo": 468,
+      "color": "asffas",
+      "is_estado": false,
+      "venta": "disponible"
+    },
+    {
+      "id": "13",
+      "marca": "akbfgajksbgkj",
+      "linea": "njakbfj",
+      "modelo": 44545,
+      "color": "fjajkfja",
+      "is_estado": false,
+      "venta": "disponible",
+      "debaja": true
+    },
+    {
+      "id": "14",
+      "marca": "fakfanskl",
+      "linea": "456465",
+      "modelo": 6464,
+      "color": "fafafs",
+      "is_estado": true,
+      "venta": "disponible"
+    },
+    {
+      "id": "15",
+      "marca": "asfaskf",
+      "linea": "kfmaklf",
+      "modelo": 45456,
+      "color": "fafjkfas",
+      "is_estado": false,
+      "venta": "disponible",
+      "debaja": true
+    },
+    {
+      "id": "16",
+      "marca": "ljafhaishfa",
+      "linea": "fafokopk",
+      "modelo": 456465,
+      "color": "fafashb",
+      "is_estado": true,
+      "venta": true
+    },
+    {
+      "id": "17",
+      "marca": "afuiasfbhyiasb",
+      "linea": "ujfnauisfni",
+      "modelo": 48489,
+      "color": "fasfnh",
+      "is_estado": true,
+      "venta": true
+    },
+    {
+      "id": "18",
+      "marca": "fjashfkashfjkhajk",
+      "linea": "akfkla",
+      "modelo": 4156465,
+      "color": "fajkfak",
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
+    },
+    {
+      "id": "19",
+      "marca": "isFHASFHJKA",
+      "linea": "KLAFLK",
+      "modelo": 54654,
+      "color": "NFAJLKF",
+      "is_estado": true,
+      "venta": true
     }
   ],
   "buses": [

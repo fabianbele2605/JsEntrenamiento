@@ -43,7 +43,7 @@ async function getAutoPorID(id) {
 }
 
 
-// funcion para saber si estado del vehiculo
+// funcion estado de auto
 async function estadoAuto(id) {
     try {
         const response = await fetch(`http://localhost:3000/autos/${id}`, {

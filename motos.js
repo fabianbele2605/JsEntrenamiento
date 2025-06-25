@@ -9,7 +9,7 @@ async function agregarMoto(moto) {
         const response = await fetch('http://localhost:3000/motos', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body : JSON.stringify({ id: nuevoId.toString(), ...moto, is_estado: true})
+            body : JSON.stringify({ id: nuevoId.toString(), ...moto, is_estado: true, venta: "disponible" })
         });
 
         if (!response.ok) {
@@ -45,16 +45,16 @@ async function getMotoPorID(id) {
 async function estadoMoto(id) {
     try {
         const response = await fetch(`http://localhost:3000/motos/${id}`, {
-            method: "PATCH",
-            headers: { 'content-type' : 'application/json' },
-            body: JSON.stringify({ is_estado: false})
+            method: 'PATCH',
+            headers: { 'Content-Type' : 'application/json' },
+            body: JSON.stringify({ is_estado: false, debaja: true})
         });
 
         if(!response.ok) {
             throw new Error('todavia no se ha vendido la moto');
         }
 
-        alert('Moto vendida');
+        alert('Moto de baja');
         obtenerMotoDisponibles();
     } catch (error) {
         console.error('Error al quitar la moto del inventario:', error);
@@ -108,14 +108,14 @@ async function obtenerMotoDisponibles() {
                 <td>
                     <button onclick="estadoMoto('${moto.id}')">De baja</button>
                     <button onclick="viewMotoDetails('${moto.id}')">Ver</button>
-                    <button onclick="ventaMoto"('${moto.id}')">Vendida</button>
+                    <button onclick="ventaMoto('${moto.id}')">Vendido</button>
                  </td>
             `;
             tableBody.appendChild(row);
         });
     } catch (error) {
         console.error('Error al recuperar moto:', error);
-        alert('Error al recuperar moto');
+        
     }
 }
 
@@ -124,7 +124,7 @@ async function obtenerMotoDisponibles() {
 async function viewMotoDetails(id) {
     const moto = await getMotoPorID(id);
     if(moto) {
-        alert(`Detalle del auto:\nID: ${moto.id}\nMarca: ${moto.marca}\nLinea: ${moto.linea}\nModelo: ${moto.modelo}\nColor: ${moto.color}`);
+        alert(`Detalle de la moto:\nID: ${moto.id}\nMarca: ${moto.marca}\nLinea: ${moto.linea}\nModelo: ${moto.modelo}\nColor: ${moto.color}`);
     } else {
         alert('Moto no encontrado o no activo');
     }
