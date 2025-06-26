@@ -9,7 +9,7 @@ async function agregarAuto(auto) {
         const response = await fetch('http://localhost:3000/autos', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body : JSON.stringify({ id: nuevoId.toString(), ...auto, is_estado: true, venta: "disponible" })
+            body : JSON.stringify({ id: nuevoId.toString(), ...auto, is_estado: true })
         });
 
         if (!response.ok) {
@@ -108,7 +108,7 @@ async function obtenerAutoDisponibles() {
                 <td>${auto.linea}</td>
                 <td>${auto.modelo}</td>
                 <td>${auto.color}</td>
-                <td>${auto.venta}</td>
+                <td>${auto.venta?'Vendido':'Disponible'}</td>
                 <td>
                     <button onclick="estadoAuto('${auto.id}')">De baja</button>
                     <button onclick="viewCarDetails('${auto.id}')">Ver</button>
@@ -167,3 +167,5 @@ async function handleAddCar() {
 
 obtenerAutoDisponibles()  
 
+
+const validateSale=(estado)=> estado?'Vendido':'Disponible'

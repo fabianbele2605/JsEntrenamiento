@@ -9,7 +9,7 @@ async function agregarMoto(moto) {
         const response = await fetch('http://localhost:3000/motos', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body : JSON.stringify({ id: nuevoId.toString(), ...moto, is_estado: true, venta: "disponible" })
+            body : JSON.stringify({ id: nuevoId.toString(), ...moto, is_estado: true })
         });
 
         if (!response.ok) {
@@ -104,7 +104,7 @@ async function obtenerMotoDisponibles() {
                 <td>${moto.linea}</td>
                 <td>${moto.modelo}</td>
                 <td>${moto.color}</td>
-                <td>${moto.venta}</td>
+                <td>${moto.venta?'Vendido' : 'Disponible'}</td>
                 <td>
                     <button onclick="estadoMoto('${moto.id}')">De baja</button>
                     <button onclick="viewMotoDetails('${moto.id}')">Ver</button>
@@ -162,3 +162,5 @@ async function handleAddMoto() {
 
 
 obtenerMotoDisponibles()
+
+const validateSale=(estado)=> estado?'Vendido':'Disponible'

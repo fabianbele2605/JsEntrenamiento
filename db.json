@@ -303,6 +303,42 @@
       "color": "blanco",
       "is_estado": true,
       "venta": true
+    },
+    {
+      "id": "33",
+      "marca": "hfauhfuasihf",
+      "linea": "fasfnkjabn",
+      "modelo": 514654,
+      "color": "465fa",
+      "is_estado": true,
+      "venta": true
+    },
+    {
+      "id": "34",
+      "marca": "adfashbfhjb",
+      "linea": "junbfjksbgksbk",
+      "modelo": 46846,
+      "color": "fdhh",
+      "is_estado": true,
+      "venta": "disponible"
+    },
+    {
+      "id": "35",
+      "marca": "fjasbjkfbsajk",
+      "linea": "jfnajln5456",
+      "modelo": 54564,
+      "color": "sakfnjikl",
+      "is_estado": true,
+      "venta": true
+    },
+    {
+      "id": "36",
+      "marca": "Mazda",
+      "linea": "cx30",
+      "modelo": 2023,
+      "color": "blanca",
+      "is_estado": true,
+      "venta": true
     }
   ],
   "motos": [
@@ -480,6 +516,35 @@
       "linea": "KLAFLK",
       "modelo": 54654,
       "color": "NFAJLKF",
+      "is_estado": true,
+      "venta": true
+    },
+    {
+      "id": "20",
+      "marca": "Pulsar",
+      "linea": "ns160",
+      "modelo": 2023,
+      "color": "verde",
+      "is_estado": false,
+      "venta": "disponible",
+      "debaja": true
+    },
+    {
+      "id": "21",
+      "marca": "Pulsar",
+      "linea": "Ns200",
+      "modelo": 2015,
+      "color": "roja",
+      "is_estado": false,
+      "venta": true,
+      "debaja": true
+    },
+    {
+      "id": "22",
+      "marca": "Akt",
+      "linea": "Nkd 125",
+      "modelo": 2025,
+      "color": "Negro",
       "is_estado": true,
       "venta": true
     }
