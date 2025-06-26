@@ -339,6 +339,15 @@
       "color": "blanca",
       "is_estado": true,
       "venta": true
+    },
+    {
+      "id": "37",
+      "marca": "mazda",
+      "linea": "cx50",
+      "modelo": 2020,
+      "color": "rojo",
+      "is_estado": true,
+      "venta": true
     }
   ],
   "motos": [
