@@ -284,6 +284,25 @@
       "color": "fasfkasjf",
       "is_estado": true,
       "venta": true
+    },
+    {
+      "id": "31",
+      "marca": "Renaul",
+      "linea": "sandero",
+      "modelo": 2020,
+      "color": "negro",
+      "is_estado": false,
+      "venta": "disponible",
+      "debaja": true
+    },
+    {
+      "id": "32",
+      "marca": "nissan",
+      "linea": "sentra",
+      "modelo": 2023,
+      "color": "blanco",
+      "is_estado": true,
+      "venta": true
     }
   ],
   "motos": [
