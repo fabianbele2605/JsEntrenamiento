@@ -1,0 +1,120 @@
+header {
+    display: flex;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-image: url(./img/WhatsApp\ Image\ 2025-06-27\ at\ 9.22.38\ AM.jpeg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    justify-content: left;
+    padding: 50px;
+    margin-top: 0px;
+    font-size: 40px;
+}
+
+article {
+    color: rgb(13, 14, 14);
+    font-style: italic;
+    font-size: 27px;
+    border-radius: 8%;
+}
+
+
+
+h3 {
+    display: flex;
+    justify-content: center;
+    color: rgb(13, 14, 14);
+    border-radius: 7%;
+    margin-bottom: 10;
+    font-size: 80px;
+}
+
+input {
+    color: rgb(13, 14, 14);
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(224, 194, 194, 0.288);
+    padding: 10px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-top: 70px;
+    font-size: large;
+    color: rgb(13, 14, 14);
+    background-color: rgba(191, 209, 224, 0.295);
+    border-bottom: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+footer img{
+    padding: 0%;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+a {
+    color: rgb(13, 14, 14);
+    text-decoration: none;
+}
+
+@keyframes mover-izquierda-derecha {
+    from{
+        transform: translateX(-100px)
+    }
+    to{
+        transform: translateX(100px)
+    }
+}
+
+ /* Importar fuente retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        background-size: cover;
+        background-position: top;
+        background-attachment: local;
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 350px) {
+    body {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-position: top center;
+        height: 100vh;
+    }
+
+    
+}
